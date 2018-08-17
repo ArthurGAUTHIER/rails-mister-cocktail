@@ -1,20 +1,17 @@
 <%= render 'components/banner' %>
 <div class="container flexbox">
-  <h1> Cocktails#index</h1>
-  <p>Find me in app/views/cocktails/index.html.erb</p>
+  <h1>Alchithèque</h1>
 
   <div class="container">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
             <div class="col-xs-12 col-sm-4">
               <h4> <%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
-              <%= render 'components/card' %>
+              <%= render 'components/card', cocktail: cocktail %>
             </div>
         <% end %>
       </div>
     </div>
-      <br>
-      <%= link_to "Add new cocktail", new_cocktail_path, class: "btn btn-primary"%>
   </div>
 
 </div>

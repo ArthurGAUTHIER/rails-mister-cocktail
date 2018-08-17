@@ -1,2 +1,9 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<div class="container flexbox">
+  <h1>Alchimist receipe</h1>
+  <h4>Add doses to a cocktail</h4>
+  <div class="container flexbox">
+    <%= render 'components/form_dose', cocktail: @cocktail, dose: @dose %>
+    <br>
+    <%= link_to "Back to list", cocktails_path, class: "btn btn-primary"%>
+  </div>
+</div>
